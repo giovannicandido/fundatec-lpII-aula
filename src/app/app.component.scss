@@ -3,7 +3,8 @@ app-nav-bar {
 }
 
 .main-body {
-    flex-grow: 10; min-width: 600px; border: 1px solid red;
+    flex-grow: 10; width: 600px; border: 1px solid red;
+    padding: 5px;
 }
 
 .app-content {
