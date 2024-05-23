@@ -1,0 +1,13 @@
+app-nav-bar {
+    flex-grow: 1; min-width: 200px; border: 1px solid blue;
+}
+
+.main-body {
+    flex-grow: 10; width: 600px; border: 1px solid red;
+    padding: 5px;
+}
+
+.app-content {
+    display: flex;
+    flex-direction: row;
+}

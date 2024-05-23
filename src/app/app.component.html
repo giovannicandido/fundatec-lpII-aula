@@ -1,15 +1,1 @@
-<app-header></app-header>
-
-<div class="app-content">
-  <app-nav-bar></app-nav-bar>
-  <div class="main-body">
-    <!-- Componentes das rotas vao ser carregados aqui nessa tag -->
-    <router-outlet></router-outlet>
-  </div>
-  
-</div>
-<div>
-  <a [routerLink]="['/']">Ir para Home</a> <br />
-  <a [routerLink]="['bem-vindo']">Ir para Bem vindo</a> <br />
-</div>
-
+<router-outlet></router-outlet>
