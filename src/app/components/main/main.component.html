@@ -3,6 +3,18 @@
 
 {{msg}} <br />
 
-<input type="text" name="peopleName" [(ngModel)]="name" placeholder="Qual o seu nome" />
+<input type="text" name="peopleName" [(ngModel)]="msg" placeholder="Qual o seu nome" />
 <button (click)="changeMsg()">Mudar mensagem</button>
+<br />
+{{msg}} <br />
+<h1 *ngIf="msg === 'Hello'">
+    A mensagem contem apenas hello
+</h1>
 
+<ul>
+    <li *ngFor="let item of items">{{item}} <button (click)="removeItem(item)">Remover</button></li> 
+</ul>
+
+<input [(ngModel)]="item" placeholder="Digite um item"/>
+
+<button (click)="adicionarItem()">Adicionar item</button>
