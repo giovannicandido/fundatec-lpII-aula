@@ -8,7 +8,9 @@ import { Component } from '@angular/core';
 export class MainComponent {
   msg = 'Hello'
 
+  name: string = "Alan"
+
   changeMsg() {
-    this.msg = "Hello World"
+    this.msg = `Hello, ${this.name}`
   }
 }
