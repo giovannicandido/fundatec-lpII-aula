@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrl: './main.component.scss'
 })
 export class MainComponent {
+  msg = 'Hello'
 
+  changeMsg() {
+    this.msg = "Hello World"
+  }
 }
