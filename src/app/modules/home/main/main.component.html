@@ -18,3 +18,13 @@
 <input [(ngModel)]="item" placeholder="Digite um item"/>
 
 <button (click)="adicionarItem()">Adicionar item</button>
+
+<div>
+    <button [disabled]="isDisabled">Teste disabled</button> <br />
+    {{msg}}
+</div>
+
+
+<div (mouseenter)="mouseEnter()" (mouseleave)="mouseLeave()" class="box">
+    Passe o mouse aqui
+</div>

@@ -16,6 +16,8 @@ export class MainComponent {
     'Terceiro'
   ]
 
+  isDisabled = false
+
   changeMsg() {
     this.msg = `Hello, ${this.name}`
   }
@@ -33,5 +35,15 @@ export class MainComponent {
     if(index >= 0) {
       this.items.splice(index, 1)
     }
+  }
+
+  mouseEnter() {
+    this.msg = "Força rio grande"
+    this.isDisabled = true
+  }
+
+  mouseLeave() {
+    this.msg = ""
+    this.isDisabled = false
   }
 }
