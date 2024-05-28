@@ -1,8 +1,6 @@
 import { NgModule } from "@angular/core";
 import { Route, RouterModule } from "@angular/router";
-import { MainComponent } from "./components/main/main.component";
-import { BemVindoComponent } from "./components/bem-vindo/bem-vindo.component";
-import { LayoutComponent } from "./layout/layout/layout.component";
+import { LayoutComponent } from "./modules/layout/layout/layout.component";
 
 const routes: Route[] = [
     {
@@ -10,12 +8,10 @@ const routes: Route[] = [
         children: [
             {
                 path: '',
-                component: MainComponent
+                loadChildren: () => import('./modules/home/home.module')
+                    .then(m => m.HomeModule)
             },
-            {
-                path: 'bem-vindo',
-                component: BemVindoComponent
-            }
+            // todo voltar aqui para carregar outro modulo
         ]
     }
 ];

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterModule, RouterOutlet } from '@angular/router';
-import { LayoutModule } from './layout/layout.module';
+import { LayoutModule } from './modules/layout/layout.module';
 import { AppRoutingModule } from './app-routing.module';
 
 @Component({
