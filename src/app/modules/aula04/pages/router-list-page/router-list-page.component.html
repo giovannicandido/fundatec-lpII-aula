@@ -1,4 +1,7 @@
-<p-table [value]="persons" [tableStyle]="{ 'min-width': '50rem' }">
+<p-button (click)="navigateSelected()" label="Visualizar Selecionado" severity="success"></p-button>
+
+
+<p-table [value]="persons" [tableStyle]="{ 'min-width': '50rem' }" [(selection)]="selectedPerson" dataKey="id">
     <ng-template pTemplate="header">
         <tr>
             <th>Nome</th>
@@ -7,8 +10,11 @@
     </ng-template>
     <ng-template pTemplate="body" let-person>
         <tr>
+            <td>
+                <p-tableRadioButton [value]="person" />
+            </td>
             <td [routerLink]="['dados-pessoa/', person.id]">{{ person.name }}</td>
-            <td>{{ person.age }}</td>
+            <td (click)="navigate(person.id)">{{ person.age }}</td>
         </tr>
     </ng-template>
 </p-table>

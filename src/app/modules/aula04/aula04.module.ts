@@ -5,6 +5,7 @@ import { routes } from './routers';
 import { RouterListPageComponent } from './pages/router-list-page/router-list-page.component';
 import { TableModule } from 'primeng/table';
 import { PersonDataPageComponent } from './pages/person-data-page/person-data-page.component';
+import { ButtonModule } from 'primeng/button';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { PersonDataPageComponent } from './pages/person-data-page/person-data-pa
   imports: [
     RouterModule.forChild(routes),
     CommonModule,
-    TableModule
+    TableModule,
+    ButtonModule
   ]
 })
 export class Aula04Module { }
