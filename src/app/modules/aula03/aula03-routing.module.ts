@@ -8,17 +8,20 @@ import { PipesPageComponent } from './pages/pipes-page/pipes-page.component';
 const routes: Route [] = [
     {
         path: '',
-        component: HomePageComponent
-    }, {
-        path: 'databind-styles',
-        component: DatabindStylesPageComponent
-    }, {
-        path: 'pipes',
-        component: PipesPageComponent
-    }, {
-        path: 'services',
-        component: ServicesPageComponent
-    }
+        component: HomePageComponent,
+        children: [
+            {
+                path: 'databind-styles',
+                component: DatabindStylesPageComponent
+            }, {
+                path: 'pipes',
+                component: PipesPageComponent
+            }, {
+                path: 'services',
+                component: ServicesPageComponent
+            }
+        ]
+    }, 
 ]
 
 @NgModule({

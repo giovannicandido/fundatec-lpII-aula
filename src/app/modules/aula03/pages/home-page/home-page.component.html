@@ -1,1 +1,8 @@
-<p>home-page works!</p>
+<p-toolbar>
+    <div class="p-toolbar-group-start grid" >
+        <p-button [routerLink]="['databind-styles']" icon="pi pi-spin pi-cog" class="col" label="Data Bind" size="large"/>
+        <p-button [routerLink]="['pipes']" icon="pi pi-chevron-left" class="col" label="Pipelines" size="large"/>
+        <p-button [routerLink]="['services']" icon="pi pi-server" class="col" label="Services" size="large" />
+    </div>
+</p-toolbar>
+<router-outlet></router-outlet>
