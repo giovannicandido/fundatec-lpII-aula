@@ -12,9 +12,14 @@ export const routes: Routes = [
                 loadChildren: () => import('./modules/home/home.module').then(
                     module => module.HomeModule
                 )
+            }, {
+                path: 'aula-03',
+                loadChildren: () => import('./modules/aula03/aula03.module').then(
+                    module => module.Aula03Module
+                )
             }
         ]
     }, {
-        path: 'login', component: LoginComponent, 
+        path: 'login', component: LoginComponent
     }
 ];
