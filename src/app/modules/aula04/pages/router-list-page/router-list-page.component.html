@@ -1,0 +1,14 @@
+<p-table [value]="persons" [tableStyle]="{ 'min-width': '50rem' }">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Nome</th>
+            <th>Idade</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-person>
+        <tr>
+            <td [routerLink]="['dados-pessoa/', person.id]">{{ person.name }}</td>
+            <td>{{ person.age }}</td>
+        </tr>
+    </ng-template>
+</p-table>

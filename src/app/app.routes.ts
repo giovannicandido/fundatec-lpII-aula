@@ -17,6 +17,10 @@ export const routes: Routes = [
                 loadChildren: () => import('./modules/aula03/aula03.module').then(
                     module => module.Aula03Module
                 )
+            }, {
+                path: 'aula-04',
+                loadChildren: () => import("./modules/aula04/aula04.module")
+                    .then(module => module.Aula04Module)
             }
         ]
     }, {
