@@ -1,1 +1,20 @@
-<p>databind-styles-page works!</p>
+<h1 class="text-5xl">Exemplos de Databind Usando Estilo</h1>
+
+<div class="flex flex-wrap justify-content-center gap-2">
+    <div [@color]="color == 'blue' ? 'yellow' : 'brown' " class="box" [class]="{blue: color == 'blue', yellow: color == 'yellow', red: color == 'red'}">
+
+    </div>
+    
+    <div [@color]="color == 'blue' ? 'blue' : 'red'" class="box" [class]="{blue: color == 'blue', yellow: color == 'yellow', red: color == 'red'}">
+    
+    </div>
+    
+    <div [@color]="color == 'blue' ? 'red' : 'blue'" class="box" [class]="{blue: color == 'blue', yellow: color == 'yellow', red: color == 'red'}">
+    
+    </div>
+
+</div>
+<div style="margin-top: 10px;">
+    <p-button [severity]="severity" label="Mudar cor" (click)="mudarCor()"></p-button>
+</div>
+

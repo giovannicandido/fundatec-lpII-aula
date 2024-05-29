@@ -1,3 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
 @import "primeicons/primeicons.css";
-@import "primeflex/primeflex.css"
+@import "primeflex/primeflex.css";
+
+.box {
+    width: 200px;
+    height: 200px;
+    
+    &.blue {
+        background-color:  blue;
+    }
+
+    &.red {
+        background-color:  red;
+    }
+
+    &.yellow {
+        background-color:  rgb(183, 183, 23);
+    }
+
+}
