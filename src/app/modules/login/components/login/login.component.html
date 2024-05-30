@@ -1,5 +1,10 @@
 <div>
-    <input type="text" placeholder="Usuario" />
-    <input type="password" placeholder="Password">
+    <input pInputText type="text" [(ngModel)]="user" placeholder="Usuario" />
+    <input pInputText type="password" [(ngModel)]="password" placeholder="Password">
 </div>
-<a [routerLink]="['']">Ir para aplicação</a>
+<p-messages 
+    [(value)]="errorMessage" 
+    [enableService]="false" 
+    [closable]="false" />
+
+<p-button label="Logar" (click)="login()"></p-button>

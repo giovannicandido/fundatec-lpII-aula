@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { LoginComponent } from './modules/login/components/login/login.component';
 import { LayoutComponent } from './modules/layout/layout/layout.component';
+import { UserLoggedInGuard } from './modules/shared/guards/user-logged.guard';
 
 export const routes: Routes = [
     {
@@ -9,6 +10,7 @@ export const routes: Routes = [
         children: [
             {
                 path: '',
+                canActivate: [UserLoggedInGuard],
                 loadChildren: () => import('./modules/home/home.module').then(
                     module => module.HomeModule
                 )

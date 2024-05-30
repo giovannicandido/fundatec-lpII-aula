@@ -1,6 +1,7 @@
 import { Route } from "@angular/router";
 import { RouterListPageComponent } from "./pages/router-list-page/router-list-page.component";
 import { PersonDataPageComponent } from "./pages/person-data-page/person-data-page.component";
+import { UserLoggedInGuard } from "../shared/guards/user-logged.guard";
 
 export const routes: Route [] = [
     {
@@ -8,6 +9,7 @@ export const routes: Route [] = [
         component: RouterListPageComponent
     }, {
         path: 'dados-pessoa/:id',
-        component: PersonDataPageComponent
+        component: PersonDataPageComponent,
+        canActivate: [UserLoggedInGuard]
     }
 ]
