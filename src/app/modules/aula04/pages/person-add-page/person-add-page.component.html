@@ -1,0 +1,14 @@
+<div class="grid" [formGroup]="form">
+    <div class="row">
+        <div class="col">
+            <input pInputText type="text" name="name" formControlName="name" placeholder="Name" />
+        </div>
+        <div class="col">
+            <p-inputNumber name="age" formControName="age" placeholder="Age"></p-inputNumber>
+        </div>
+    </div>
+    <div class="row">
+        {{ form.valid ? "" : "Formulario invalido" }}
+    </div>
+
+</div>

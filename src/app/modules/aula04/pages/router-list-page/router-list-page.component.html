@@ -1,4 +1,5 @@
 <p-button (click)="navigateSelected()" label="Visualizar Selecionado" severity="success"></p-button>
+<p-button [routerLink]="['add-person']" label="Adicionar Pessoa" severity="info"></p-button>
 
 
 <p-table [value]="persons" [tableStyle]="{ 'min-width': '50rem' }" [(selection)]="selectedPerson" dataKey="id">
