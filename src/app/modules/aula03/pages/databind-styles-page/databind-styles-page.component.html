@@ -18,3 +18,13 @@
     <p-button [severity]="severity" label="Mudar cor" (click)="mudarCor()"></p-button>
 </div>
 
+<h1>Data binding simples - One Way</h1>
+
+<div [style]="{'color': color == 'blue' ? 'red' : 'blue', 'backgroundColor': color}">
+    Essa informação veio do typescript: {{color}} <br />
+    Mais informações <br />
+</div>
+
+<h1>Data bind two way</h1>
+<input pInputText placeholder="Digite uma cor" [(ngModel)]="color" />
+

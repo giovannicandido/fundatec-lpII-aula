@@ -4,6 +4,7 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import { DatabindStylesPageComponent } from './pages/databind-styles-page/databind-styles-page.component';
 import { ServicesPageComponent } from './pages/services-page/services-page.component';
 import { PipesPageComponent } from './pages/pipes-page/pipes-page.component';
+import { IfFormPageComponent } from './pages/if-form-page/if-form-page.component';
 
 const routes: Route [] = [
     {
@@ -19,6 +20,9 @@ const routes: Route [] = [
             }, {
                 path: 'services',
                 component: ServicesPageComponent
+            },{
+                path: 'if-form',
+                component: IfFormPageComponent
             }
         ]
     }, 
