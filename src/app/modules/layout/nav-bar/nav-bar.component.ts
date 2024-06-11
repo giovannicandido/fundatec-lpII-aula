@@ -20,6 +20,8 @@ export class NavBarComponent {
           },
           {
             label: 'Aula 04', icon: 'pi pi-address-book', routerLink: "/aula-04"
+          }, {
+            label: 'Aula 06', icon: 'pi pi-bolt pi-spin', routerLink: "/aula-06"
           }
         ]
       }
