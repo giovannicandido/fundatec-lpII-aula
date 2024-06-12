@@ -5,3 +5,8 @@ Valor do subject: {{subject | async}} <br />
 Evento do botão: {{subject2 | async }}
 
 <button (click)="dobrarValor()">Click me</button>
+<form [formGroup]="searchForm">
+<p>
+    <input pInputText formControlName="searchValue" name="searchValue" placeholder="Search" />
+</p>
+</form>
