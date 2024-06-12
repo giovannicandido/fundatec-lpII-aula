@@ -1,6 +1,6 @@
 import { Component, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
-import { BehaviorSubject, Subscription, Observable, of, map, filter } from 'rxjs'
+import { BehaviorSubject, Subscription, Observable, of, map, filter, debounceTime } from 'rxjs'
 
 @Component({
     selector: 'app-assincrono-page',
@@ -32,10 +32,10 @@ export class AssincronoPageComponent implements OnInit, OnDestroy {
             .pipe(
                 filter(value => {
                     let lenght = value.searchValue?.length == undefined ? 0 : value.searchValue.length
-                    return lenght <= 5
+                    return lenght <= 10000
                 }
                 ),
-                map(value => value.searchValue + " map executado")
+                debounceTime(500)
             )
             .subscribe(value => this.search(value))
     }
