@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { LayoutModule } from './modules/layout/layout.module';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
