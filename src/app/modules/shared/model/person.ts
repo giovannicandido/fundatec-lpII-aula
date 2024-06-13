@@ -4,6 +4,11 @@ export interface Person {
     age: number
 }
 
+export interface Pessoa {
+    nome: string
+    idade: number
+}
+
 export const persons: Person[] = [
     {
         id: 1,

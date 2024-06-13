@@ -1,0 +1,16 @@
+<h1>Lista de pessoas</h1>
+
+<p-table [value]="(pessoas | async)!" [tableStyle]="{ 'min-width': '50rem' }">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Nome</th>
+            <th>Idade</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-pessoa>
+        <tr>
+            <td>{{ pessoa.nome }}</td>
+            <td>{{ pessoa.idade }}</td>
+        </tr>
+    </ng-template>
+</p-table>

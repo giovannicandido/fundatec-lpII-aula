@@ -1,0 +1,14 @@
+<h1>Aula 07</h1>
+
+<ul>
+    <li *ngFor="let pe of pessoas">
+        {{pe.nome}} - {{pe.idade}}
+    </li>
+</ul>
+<h1>Usando async</h1>
+<ul>
+    <li *ngFor="let pe of pessoas2 | async">
+        {{pe.nome}} - {{pe.idade}}
+    </li>
+</ul>
+<h1>Usando Primeng Table</h1>

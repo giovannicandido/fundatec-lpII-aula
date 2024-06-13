@@ -26,6 +26,9 @@ export const routes: Routes = [
             }, {
                 path: 'aula-06',
                 loadChildren: () => import("./modules/aula06/aula06.module").then(module => module.Aula06Module)
+            }, {
+                path: 'aula-07',
+                loadChildren: () => import("./modules/aula07/aula07.module").then(module => module.Aula07Module)
             }
         ]
     }, {
